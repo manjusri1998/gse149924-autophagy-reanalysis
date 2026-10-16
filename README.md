@@ -19,10 +19,11 @@ low-amplitude shifts; the autophagy sets simply do not show one.
 **This is positive evidence for a post-translational mechanism.** If 15-PGDH inhibition raises autophagic
 flux, it does not do so by changing autophagy gene transcription.
 
-![Per-sample heatmap](figures/fig13_per_sample_heatmap.png)
+![Group-mean heatmap](figures/fig13_group_mean_heatmap.png)
 
-*Only the respiratory-chain block separates the two arms (mean z −0.75 vehicle vs +0.75 drug); the
-autophagy blocks are indistinguishable (+0.03 vs −0.03).*
+*Group means of three replicates per arm, mean-centred within gene so magnitude is preserved. The
+respiratory-chain block separates the arms by 0.257 VST units (≈ log2); every autophagy block differs by
+0.012 — a twentieth of that. Per-replicate values are in `figures/fig13_per_sample_heatmap.png`.*
 
 ## The decisive comparison
 
