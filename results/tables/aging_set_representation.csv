@@ -1,0 +1,11 @@
+"set","n_tested","n_aging","expected","hyper_p","enrich","BH"
+"Core effectors",9,0,0.4,1,0,1
+"Core machinery",12,1,0.6,0.451,1.67,0.752
+"FOXO-dependent",10,1,0.5,0.394,2,0.752
+"Autophagy regulation",307,18,15,0.243,1.2,0.648
+"CLEAR / lysosomal",67,3,3.3,0.641,0.91,0.801
+"Lysosome (GO)",598,22,29.2,0.936,0.75,1
+"Mitophagy",15,3,0.7,0.0339,4.29,0.169
+"Atrogenes",6,1,0.3,0.259,3.33,0.648
+"Denervation",10,9,0.5,1.43e-11,18,1.43e-10
+"Respiratory chain",88,4,4.3,0.628,0.93,0.801

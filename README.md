@@ -44,6 +44,24 @@ resolving 16 genes at FDR < 0.05 against the deposit's 1. A per-sample myeloid s
 from these counts — differs between arms by −0.347 (p = 0.60), and regressing it out leaves every
 autophagy set flat while the respiratory chain holds at +1.641.
 
+## Young versus old, and what age actually changes
+
+![Aging](figures/fig14_aging_vs_drug_heatmap.png)
+
+The aged-vs-young comparison can only be read through the authors' deposited aging table, which is
+**pre-filtered to the 813 genes at padj < 0.1** — the batch-1 libraries needed to recompute it
+genome-wide were not retrieved. Within that limit the pattern is striking: **not one of the nine core
+autophagy effectors is among the age-responsive genes**, and core machinery and FOXO-dependent sets
+contribute one gene each, all at or below chance expectation (4.9% of any set). The denervation
+programme is the opposite — 9 of 10 genes, an 18-fold enrichment (hypergeometric BH 1.4e-10).
+
+So the autophagy machinery is not a conspicuous part of this aging signature either, which is the
+backdrop against which the drug's null should be read. The right panel shows that the genes which do
+rise with age — *Chrng*, *Myh3*, *Musk*, *Runx1*, *Hdac4* — are the ones the drug pushes back down.
+
+*Caveat: absence from a filtered list means "not significant at padj < 0.1", not "unchanged". This panel
+cannot distinguish the two, which is exactly what re-quantifying the batch-1 libraries would fix.*
+
 ## Findings by item
 
 | # | item | role | verdict |
