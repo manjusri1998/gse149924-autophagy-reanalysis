@@ -1,112 +1,125 @@
-# Does 15-PGDH inhibition work through autophagy?
+# Transcriptional evidence for autophagy induction by 15-PGDH inhibition in aged muscle
 
-A reanalysis of **GSE149924** — mouse quadriceps from aged mice given the 15-PGDH inhibitor SW033291 for
-a month, alongside aged and young vehicle controls. From Palla *et al.*, *Science* 2021,
-[doi:10.1126/science.abc8059](https://doi.org/10.1126/science.abc8059).
+A targeted reanalysis of GSE149924 (Palla *et al.*, *Science* 2021,
+[doi:10.1126/science.abc8059](https://doi.org/10.1126/science.abc8059)): mouse quadriceps from aged
+animals treated for one month with the 15-PGDH inhibitor SW033291, with aged and young vehicle controls,
+three animals per arm.
 
-The paper reports that blocking 15-PGDH rejuvenates aged muscle, and attributes part of the benefit to
-restored autophagy. This repository asks a narrow question of the deposited data: **is that autophagy
-effect visible in gene expression?**
+## Background
 
-## The short answer
+Palla *et al.* report that inhibiting 15-PGDH raises PGE2 in aged muscle and restores mass, strength and
+mitochondrial function, and that autophagic flux increases alongside these changes. The flux evidence is
+a p62 immunoblot under colchicine. The accompanying RNA-seq is used in that paper mainly to establish
+the mitochondrial and ubiquitin-ligase arms of the phenotype. Whether the autophagy component is
+reflected in the transcriptome has not been examined directly, and it bears on mechanism: a
+transcriptionally driven increase in autophagy implies a different upstream biology, and a different set
+of follow-up experiments, than one mediated entirely by post-translational control.
 
-No — and the interesting part is that this is a real answer rather than a shrug.
+This reanalysis tests that question at the level of gene sets, using both the deposited differential
+expression statistics and an independent re-quantification of the drug contrast from raw reads.
 
-Muscle from drug-treated aged mice looks, in its autophagy genes, exactly like muscle from untreated aged
-mice. Not subtly different, not trending: the autophagy machinery sits at the dead centre of the
-transcriptome-wide distribution. The genes that build autophagosomes, the cathepsins and v-ATPase
-subunits that acidify lysosomes, the TFEB transcription factors that are supposed to switch the
-programme on, the FOXO-dependent arm, the mitophagy receptors — none of them move.
+## Results
 
-![Group-mean heatmap](figures/fig13_group_mean_heatmap.png)
+No autophagy-associated gene set responds to the drug. The FOXO-dependent arm, the core autophagosome
+machinery, the CLEAR network and TFEB family, cathepsins, v-ATPase subunits and mitophagy receptors are
+all indistinguishable from the transcriptome-wide background; the FOXO-dependent set sits at the 50th
+percentile of the ranked distribution, which is the definition of no shift. Effect sizes across these
+sets fall between −0.03 and +0.03 log2, and no set survives correction. The result is unchanged when the
+analysis is repeated on counts generated here from the raw FASTQs rather than on the authors' pipeline
+output, and unchanged again after regressing out a per-sample myeloid score, which excludes a shift in
+immune-cell content as the explanation.
 
-The same six mice, quantified from raw sequencing reads, show a large and unambiguous increase in
-respiratory-chain genes. That block of the heatmap is red on the right and blue on the left; everything
-above it is white. Both halves of that picture matter. The red block is the paper's own mitochondrial
-finding reproducing cleanly, and it is what licenses reading the white blocks as a measurement rather
-than as missing data. The experiment can see a coordinated, modest, biologically real shift when one is
-there. For autophagy, there isn't one.
+![Group-mean expression](figures/fig13_group_mean_heatmap.png)
 
-## What this means
+The same six libraries show a large, coherent increase in respiratory-chain subunits — complexes I
+through V, 96 genes moving together. This reproduces the mitochondrial finding reported in the original
+study and serves as an internal positive control: the comparison resolves a coordinated shift of roughly
+a quarter of a log2 unit across a gene set of this size, separating the two arms by twenty times the
+difference seen in any autophagy block. The autophagy nulls are therefore measurements rather than
+failures of detection.
 
-**The drug almost certainly does something to autophagy. It just isn't doing it through transcription.**
+A second internal control was less informative. The atrogene set, chosen because the original study
+reports these genes falling under treatment, shows a weak downward trend that proves on inspection to
+rest on *Traf6* and *Mstn* — a signalling adapter and a secreted growth inhibitor — while *Fbxo32* and
+*Trim63*, the canonical muscle E3 ligases and the two most precisely measured genes in the set, do not
+move. The discrepancy is explained by assay rather than biology: the atrogene decrease in the original
+work is RT-qPCR on separate animals, so it neither contradicts nor validates the sequencing contrast.
 
-Autophagy is overwhelmingly controlled after the gene is transcribed — by phosphorylation of ULK1 and
-the mTORC1 complex, by lipidation of LC3, by assembly and trafficking of existing protein. A cell can
-double its autophagic flux within minutes without transcribing a single new *Atg* gene. So a flat
-transcriptome is not evidence against the paper's flux measurement; it is evidence about *mechanism*.
-If PGE2 signalling raises autophagy in aged muscle, it is acting on protein that is already there.
+## Interpretation
 
-That reframes what the autophagy claim rests on, and what would be needed to nail it down. The relevant
-experiments are protein-level and kinetic — LC3-II and p62 with and without a lysosomal block, ideally
-with a phospho-ULK1 or phospho-mTOR readout — not deeper sequencing.
+The absence of a transcriptional signature is not evidence against increased autophagic flux. Autophagy
+is regulated predominantly downstream of transcription — through ULK1 and mTORC1 phosphorylation, LC3
+lipidation, and assembly and trafficking of pre-existing protein — and flux can rise several-fold
+without new transcription of autophagy genes. The finding therefore constrains mechanism rather than
+outcome: if PGE2 signalling enhances autophagy in aged muscle, it acts on protein already present.
 
-**The transcriptional story that does hold up is a different one.** What the drug visibly does to the
-aged muscle transcriptome is raise the respiratory chain and push back a set of genes associated with
-denervation and neuromuscular-junction remodelling. The second of those is not autophagy, and it fits
-the broader pattern that aged-elevated genes are returned toward their young levels. If there is a
-transcriptional mechanism to chase here, that is where it is.
+That interpretation is consistent with the other transcriptional observations here. Neither the TFEB
+family nor its CLEAR target network responds, so lysosomal biogenesis is not being transcriptionally
+induced. The cAMP–CREB axis through which PGE2 is thought to act shows no transcriptional activation
+either, with *Ppargc1a* flat despite a reported qPCR increase. Of the pathways examined, only the
+respiratory chain and a denervation-associated programme move, the latter as part of a broader return of
+age-elevated genes toward their young-animal levels.
 
-**A useful negative.** We checked the obvious ways a p62 blot can mislead — more p62 being made, or an
-oxidative-stress response driving it — and found no sign of either. So the reanalysis does not undermine
-the flux result; it narrows the space of explanations for it.
+The possibility that the p62 immunoblot reflects altered p62 synthesis rather than altered flux was
+examined and is not supported: *Sqstm1* transcript is unchanged within a tight interval, and NRF2 target
+genes, which would indicate an oxidative-stress route to p62 induction, are flat. The proteasome
+subunits lean upward rather than downward, so reduced non-autophagic p62 clearance does not account for
+the blot either. These checks narrow the space of alternative explanations for the published flux
+result.
 
-## If you are reusing this dataset
+Resolving the mechanism requires protein-level and kinetic measurements — LC3-II and p62 with and
+without lysosomal blockade, ideally alongside phospho-ULK1 or phospho-mTOR — rather than deeper
+sequencing of the same material.
 
-Two things cost us time and will cost you time.
+## Limitations
 
-**The deposited TPM matrix is broken.** Its gene names do not line up with its expression values —
-myoglobin appears nearly absent from skeletal muscle, which is impossible. Anyone computing on that file
-is computing on noise. The two deposited DESeq2 tables are sound, and our own re-quantification from raw
-reads agrees with them closely, so this looks specific to that one file. Don't use it.
+The drug contrast comprises three animals per arm, and the conclusion is restricted to coordinated
+set-level responses of the magnitude the respiratory-chain control demonstrates to be detectable.
+Smaller effects, and effects confined to individual genes, cannot be excluded.
 
-**The drug comparison is the thinnest part of the experiment.** Both arms of the SW-versus-vehicle
-comparison were sequenced about four times less deeply than the young-versus-aged arm. That is why
-low-abundance genes — immune markers in particular — cannot be read confidently in the drug contrast,
-and it is worth knowing before designing an analysis that depends on them.
+The aged-versus-young comparison is available only as deposited, filtered to genes passing the authors'
+significance threshold, so questions about how the autophagy programme behaves with age are answered
+weakly here. Within that constraint, none of the nine core autophagy effectors appears among the
+age-responsive genes, while nine of ten denervation genes do.
 
-## How far the evidence goes
+The smallest sets examined — three TFEB-family genes, five fission genes — carry little statistical
+weight individually and are reported as such. Sequencing depth is also uneven: the two arms of the drug
+contrast were sequenced roughly four-fold less deeply than the aging arm, which limits inference for
+low-abundance transcripts, immune markers in particular.
 
-This is a reanalysis of three mice per group. It can say that a coordinated transcriptional autophagy
-response is absent at a scale the experiment would have detected. It cannot say autophagy is unchanged —
-the transcriptome does not measure flux, and no amount of sequencing would make it do so.
+One earlier conclusion of this reanalysis has been **retracted**. An apparent coordinated decline in
+autophagy *regulatory* genes, significant on the deposited statistics, weakened substantially on
+re-quantification and no longer survives multiple-testing correction. It is documented in the report
+rather than removed.
 
-Two further limits are worth stating plainly. The aged-versus-young comparison exists here only in the
-form the authors deposited, filtered to the genes they called significant, so questions about how
-autophagy behaves with age are answered weakly. And the smallest gene sets — three TFEB genes, five
-fission genes — are underpowered on their own; they are reported, but little weight rests on them.
+## Notes on the deposited data
 
-One earlier result of ours did not survive its own robustness check and has been **retracted**: an
-apparent coordinated decline in autophagy *regulatory* genes weakened substantially when we re-quantified
-from raw reads and no longer stands. It is documented in the report rather than quietly deleted.
+The supplementary TPM matrix in GSE149924 carries gene identifiers that do not correspond to its
+expression values: myoglobin registers as near-absent from skeletal muscle, and rank correlation between
+that matrix and the count-based abundances from the same submission is approximately zero. No row offset
+recovers alignment. The two deposited DESeq2 tables are internally consistent and agree closely with the
+re-quantification performed here, so the problem appears confined to that one file.
 
-## What is here
+## Repository contents
 
 | | |
 |---|---|
-| `docs/REPORT.md` | the full argument, with every statistic, test and caveat |
-| `notebooks/01_reanalysis.ipynb` | all code — Part 1 on the deposited tables, Part 2 on the re-quantification |
-| `figures/` | 15 figures |
-| `results/tables/` | every number behind them |
-| `data/` | the deposited inputs and the gene sets used |
+| `docs/REPORT.md` | full analysis with all statistics, tests and per-item verdicts |
+| `notebooks/01_reanalysis.ipynb` | code; Part 1 deposited statistics, Part 2 re-quantification |
+| `figures/`, `results/tables/` | 15 figures and the tables behind them |
+| `data/` | deposited inputs and gene-set definitions |
 
-Gene sets are custom and hypothesis-specific rather than stock GO terms, because the GO "autophagy"
-category mixes the FOXO-driven, TFEB-driven and constitutive genes whose separation is the whole point.
-Claims are made at the level of gene sets, not individual genes: with three mice per group, single-gene
-results in this dataset are not stable enough to build an argument on.
+## Methods summary
 
-## Reproducing
+Gene sets were defined specifically for the hypotheses under test rather than taken from GO, because the
+GO autophagy category combines FOXO-dependent, TFEB-dependent and constitutive genes whose separation is
+the object of the analysis; GO-derived sets are labelled where used. Inference is at set level, since at
+three animals per group single-gene results are unstable. Every set-level claim was tested against a
+background matched on expression level, and multiple testing accounted across all sets examined. The
+drug contrast was re-quantified with salmon against Ensembl GRCm39 and analysed with DESeq2; fold changes
+agree with the deposited values at a rank correlation of 0.78. Full detail is in `docs/REPORT.md`, and
+`environment.yml` reproduces the software environment.
 
-```bash
-conda env create -f environment.yml && conda activate gse149924-reanalysis
-tar -xzf results/quant/salmon_quant_batch2.tar.gz -C results/quant
-jupyter lab notebooks/01_reanalysis.ipynb
-```
+## Citation
 
-Raw FASTQs (PRJNA630522, 15.5 GB) are not redistributed. The ENA mirror silently serves truncated
-files — verify each download with `gunzip -t` rather than trusting the exit code.
-
-## Citing
-
-See `CITATION.cff`, and please cite the original study, whose authors deposited the data that made this
-possible.
+`CITATION.cff`. The original study should be cited alongside any use of this reanalysis.
