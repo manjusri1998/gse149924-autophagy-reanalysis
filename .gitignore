@@ -1,0 +1,9 @@
+results/quant/quant/
+results/quant/ref/
+*.fastq.gz
+*.sra
+ref/
+fastq/
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store

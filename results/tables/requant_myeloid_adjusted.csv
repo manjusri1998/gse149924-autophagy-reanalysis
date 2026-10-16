@@ -1,0 +1,13 @@
+"set","n","unadj_Wald","unadj_p","adj_Wald","adj_p","adj_BH"
+"Core effectors (requested 9)",9,-0.198,0.606,-0.277,0.55,0.859
+"FOXO-dependent autophagy",10,-0.264,0.54,-0.531,0.207,0.621
+"Non-FOXO core machinery",12,0.082,0.642,0.06,0.641,0.859
+"CLEAR / TFEB targets (curated)",18,-0.124,0.76,-0.027,0.916,0.95
+"TFEB family (Tfeb/Tfe3/Mitf)",3,-0.046,0.999,-0.27,0.716,0.859
+"Cathepsins",11,-0.463,0.171,-0.247,0.482,0.859
+"v-ATPase subunits",14,-0.044,0.83,-0.002,0.696,0.859
+"Mitophagy receptors",10,-0.168,0.652,-0.374,0.373,0.859
+"Lysosome (GO:0005764)",452,-0.08,0.35,-0.042,0.95,0.95
+"Macroautophagy (GO:0016236)",223,-0.202,0.0348,-0.222,0.022,0.088
+"Regulation of autophagy (GO:0010506)",271,-0.177,0.0274,-0.194,0.0178,0.088
+"Respiratory chain (all ETC)",79,1.616,1e-04,1.641,1e-04,0.0012

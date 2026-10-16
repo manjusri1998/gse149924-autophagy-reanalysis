@@ -1,0 +1,4 @@
+effect,n,R2,perm_p,n_splits
+batch (aged vehicle B1 vs B2),6,0.206,0.4,20
+"age (young vs aged vehicle, B1)",7,0.276,0.029,35
+"drug (SW vs aged vehicle, B2)",6,0.197,0.5,20

@@ -1,0 +1,19 @@
+name: gse149924-reanalysis
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - requests
+  - salmon
+  - pigz
+  - r-base=4.5
+  - r-jsonlite
+  - r-tidyverse
+  - bioconductor-deseq2
+  - bioconductor-tximport
+  - bioconductor-fgsea
+  - bioconductor-limma
+  - bioconductor-edger

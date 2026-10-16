@@ -1,0 +1,5 @@
+"set","n","mean_Wald","perm_p","matched_p","perm_FDR"
+"fission",5,-0.141,0.736,0.916,0.878
+"fusion",3,-0.241,0.644,0.689,0.878
+"mitophagy_receptors",4,0.072,0.878,0.913,0.878
+"biogenesis",6,-0.227,0.549,0.7,0.878

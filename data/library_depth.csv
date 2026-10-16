@@ -1,0 +1,14 @@
+run_accession,sample_title,group,batch,read_count
+SRR11694851,AV2_Aged Veh (Batch 1),Aged vehicle (B1),1,15125611
+SRR11694850,Aged4_Aged Veh (Batch 1),Aged vehicle (B1),1,23665834
+SRR11694852,AV3_Aged Veh (Batch 1),Aged vehicle (B1),1,27945597
+SRR11694848,YV4_Young Veh (Batch 1),Young vehicle (B1),1,10467609
+SRR11694847,YV3_Young Veh (Batch 1),Young vehicle (B1),1,19281505
+SRR11694849,YV5_Young Veh (Batch 1),Young vehicle (B1),1,23059007
+SRR11694846,YV1_Young Veh (Batch 1),Young vehicle (B1),1,23752650
+SRR11694858,RM-Lib-6_Aged SW (Batch 2),Aged SW033291 (B2),2,5191308
+SRR11694857,RM-Lib-4_Aged SW (Batch 2),Aged SW033291 (B2),2,5960593
+SRR11694856,RM-Lib-1_Aged SW (Batch 2),Aged SW033291 (B2),2,7722558
+SRR11694853,RM-Lib-2_Aged Veh (Batch 2),Aged vehicle (B2),2,5072475
+SRR11694855,RM-Lib-8_Aged Veh (Batch 2),Aged vehicle (B2),2,5845317
+SRR11694854,RM-Lib-3_Aged Veh (Batch 2),Aged vehicle (B2),2,6380312

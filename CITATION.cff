@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "Targeted reanalysis of GSE149924: does 15-PGDH inhibition increase autophagy in aged muscle?"
+message: "If you use this reanalysis, please cite it and the original study."
+type: dataset
+authors:
+  - family-names: "[SURNAME]"
+    given-names: "[GIVEN NAME]"
+abstract: >-
+  Set-level reanalysis of GSE149924 (mouse quadriceps, aged +/- the 15-PGDH inhibitor SW033291),
+  using the deposited DESeq2 statistics and an independent re-quantification of the drug contrast
+  from raw FASTQs. Finds no transcriptional autophagy-lysosome response, with a working internal
+  positive control (respiratory chain) establishing that the comparison can detect coordinated
+  low-amplitude shifts.
+keywords: [RNA-seq, reanalysis, autophagy, sarcopenia, 15-PGDH, reproducibility]
+license: MIT
+references:
+  - type: article
+    authors: [{family-names: "Palla", given-names: "A. R."}, {family-names: "Blau", given-names: "H. M."}]
+    title: "Inhibition of prostaglandin-degrading enzyme 15-PGDH rejuvenates aged muscle mass and strength"
+    journal: Science
+    year: 2021
+    doi: 10.1126/science.abc8059
