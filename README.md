@@ -8,8 +8,9 @@ three animals per arm.
 ## Background
 
 Palla *et al.* report that inhibiting 15-PGDH raises PGE2 in aged muscle and restores mass, strength and
-mitochondrial function, and that autophagic flux increases alongside these changes. The flux evidence is
-a p62 immunoblot under colchicine. The accompanying RNA-seq is used in that paper mainly to establish
+mitochondrial function, and that autophagy increases alongside these changes. The claim is stated as an
+increase in autophagy in the abstract, the section heading and the discussion; flux is asserted once, in
+the results text, and rests on a p62 immunoblot under colchicine (Fig. S13C). The accompanying RNA-seq is used in that paper mainly to establish
 the mitochondrial and ubiquitin-ligase arms of the phenotype. Whether the autophagy component is
 reflected in the transcriptome has not been examined directly, and it bears on mechanism: a
 transcriptionally driven increase in autophagy implies a different upstream biology, and a different set
@@ -47,7 +48,7 @@ work is RT-qPCR on separate animals, so it neither contradicts nor validates the
 
 ## Interpretation
 
-The absence of a transcriptional signature is not evidence against increased autophagic flux. Autophagy
+The absence of a transcriptional signature is not evidence against increased autophagy, however it is measured. Autophagy
 is regulated predominantly downstream of transcription — through ULK1 and mTORC1 phosphorylation, LC3
 lipidation, and assembly and trafficking of pre-existing protein — and flux can rise several-fold
 without new transcription of autophagy genes. The finding therefore constrains mechanism rather than
