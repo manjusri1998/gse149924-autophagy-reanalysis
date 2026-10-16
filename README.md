@@ -10,7 +10,8 @@ three animals per arm.
 Palla *et al.* report that inhibiting 15-PGDH raises PGE2 in aged muscle and restores mass, strength and
 mitochondrial function, and that autophagy increases alongside these changes. The claim is stated as an
 increase in autophagy in the abstract, the section heading and the discussion; flux is asserted once, in
-the results text, and rests on a p62 immunoblot under colchicine (Fig. S13C). The accompanying RNA-seq is used in that paper mainly to establish
+the results text, and rests on a p62 immunoblot under colchicine (Fig. S13C) — colchicine blocking
+autophagosome–lysosome fusion rather than lysosomal degradation itself. No LC3-II panel accompanies it. The accompanying RNA-seq is used in that paper mainly to establish
 the mitochondrial and ubiquitin-ligase arms of the phenotype. Whether the autophagy component is
 reflected in the transcriptome has not been examined directly, and it bears on mechanism: a
 transcriptionally driven increase in autophagy implies a different upstream biology, and a different set
@@ -61,16 +62,18 @@ either, with *Ppargc1a* flat despite a reported qPCR increase. Of the pathways e
 respiratory chain and a denervation-associated programme move, the latter as part of a broader return of
 age-elevated genes toward their young-animal levels.
 
-The possibility that the p62 immunoblot reflects altered p62 synthesis rather than altered flux was
-examined and is not supported: *Sqstm1* transcript is unchanged within a tight interval, and NRF2 target
+Because p62 is regulated independently of autophagy, and because it is the sole protein readout
+reported, the possibility that the immunoblot reflects altered p62 synthesis rather than altered
+turnover was examined. It is not supported: *Sqstm1* transcript is unchanged within a tight interval, and NRF2 target
 genes, which would indicate an oxidative-stress route to p62 induction, are flat. The proteasome
 subunits lean upward rather than downward, so reduced non-autophagic p62 clearance does not account for
 the blot either. These checks narrow the space of alternative explanations for the published flux
 result.
 
-Resolving the mechanism requires protein-level and kinetic measurements — LC3-II and p62 with and
-without lysosomal blockade, ideally alongside phospho-ULK1 or phospho-mTOR — rather than deeper
-sequencing of the same material.
+Resolving the mechanism requires protein-level and kinetic measurements: LC3-II alongside p62, each
+with and without a flux-blocking agent — colchicine at the fusion step as used here, or bafilomycin A1
+or chloroquine acting at the lysosome — and ideally a phospho-ULK1 or phospho-mTOR readout to test the
+post-translational route directly. Deeper sequencing of the same material would not help.
 
 ## Limitations
 
