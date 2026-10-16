@@ -3,8 +3,8 @@ title: "Targeted reanalysis of GSE149924: does 15-PGDH inhibition increase autop
 message: "If you use this reanalysis, please cite it and the original study."
 type: dataset
 authors:
-  - family-names: "[SURNAME]"
-    given-names: "[GIVEN NAME]"
+  - family-names: "Anbarasu"
+    given-names: "Manjushri"
 abstract: >-
   Set-level reanalysis of GSE149924 (mouse quadriceps, aged +/- the 15-PGDH inhibitor SW033291),
   using the deposited DESeq2 statistics and an independent re-quantification of the drug contrast
